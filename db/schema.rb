@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140313164702) do
+ActiveRecord::Schema.define(version: 20140313165839) do
 
   create_table "commits", force: true do |t|
     t.string   "sha"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20140313164702) do
     t.string   "avatar_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "github_id"
   end
 
 end

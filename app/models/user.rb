@@ -9,6 +9,7 @@
 #  avatar_url :string(255)
 #  created_at :datetime
 #  updated_at :datetime
+#  github_id  :integer
 #
 
 class User < ActiveRecord::Base
