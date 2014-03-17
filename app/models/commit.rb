@@ -14,6 +14,8 @@
 #
 
 class Commit < ActiveRecord::Base
+  validates_presence_of :sha, :url, :commiter_id, :author_id, :message
+
   belongs_to :author, :class_name => "User"
   belongs_to :commiter, :class_name => "User"
 end

@@ -13,5 +13,8 @@
 #
 
 class User < ActiveRecord::Base
+  validates_presence_of :name, :email, :login
+  validates_uniqueness_of :email
+
   has_many :commits
 end
