@@ -11,6 +11,7 @@
 #  message      :text
 #  created_at   :datetime
 #  updated_at   :datetime
+#  commit_date  :datetime
 #
 
 class Commit < ActiveRecord::Base
