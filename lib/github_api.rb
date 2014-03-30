@@ -9,9 +9,9 @@ class GithubApi
     @repository = repository
   end
 
-  def commits
-    request_url = "https://api.github.com/repos/#{@owner}/#{@repository}/commits"
+  def commits(parameters_str = "")
+    request_url = "https://api.github.com/repos/#{@owner}/#{@repository}/commits#{parameters_str}"
     response = Net::HTTP.get(URI.parse(request_url))
-    result = JSON.parse(response)
+    JSON.parse(response)
   end
 end
